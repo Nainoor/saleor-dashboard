@@ -1,3 +1,4 @@
+import Checklist from "@editorjs/checklist";
 import EditorJS, {
   LogLevels,
   OutputData,
@@ -9,6 +10,9 @@ import Header from "@editorjs/header";
 import List from "@editorjs/list";
 import Paragraph from "@editorjs/paragraph";
 import Quote from "@editorjs/quote";
+import SimpleImage from "@editorjs/simple-image";
+import Table from "@editorjs/table";
+import Warning from "@editorjs/warning";
 import strikethroughIcon from "@saleor/icons/StrikethroughIcon";
 import classNames from "classnames";
 import createGenericInlineTool from "editorjs-inline-tool";
@@ -26,6 +30,13 @@ const inlineToolbar = ["link", "bold", "italic", "strikethrough"];
 
 export const tools: Record<string, ToolConstructable | ToolSettings> = {
   embed: Embed,
+  image: SimpleImage,
+  warning: Warning,
+  table: Table,
+  checklist: {
+    class: Checklist,
+    inlineToolbar: true
+  },
   header: {
     class: Header,
     config: {

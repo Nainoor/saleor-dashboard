@@ -17,6 +17,7 @@ import { sectionNames } from "@saleor/intl";
 import { Backlink } from "@saleor/macaw-ui";
 import { getUserName } from "@saleor/misc";
 import { SearchPermissionGroups_search_edges_node } from "@saleor/searches/types/SearchPermissionGroups";
+import OrderNotificationStatus from "@saleor/staff/components/OrderNotificationStatus";
 import UserStatus from "@saleor/staff/components/UserStatus";
 import { FetchMoreProps, SearchPageProps } from "@saleor/types";
 import createMultiAutocompleteSelectHandler from "@saleor/utils/handlers/multiAutocompleteSelectChangeHandler";
@@ -148,6 +149,15 @@ const StaffDetailsPage: React.FC<StaffDetailsPageProps> = ({
                       data={formData}
                       disabled={disabled}
                       label={intl.formatMessage(messages.userStatusActive)}
+                      onChange={change}
+                    />
+                    <CardSpacer />
+                    <OrderNotificationStatus
+                      data={formData}
+                      disabled={disabled}
+                      label={intl.formatMessage(
+                        messages.orderNotificationStatusActive
+                      )}
                       onChange={change}
                     />
                     <CardSpacer />
