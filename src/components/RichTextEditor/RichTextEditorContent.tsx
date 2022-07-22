@@ -8,8 +8,10 @@ import EditorJS, {
 import Embed from "@editorjs/embed";
 import Header from "@editorjs/header";
 import List from "@editorjs/list";
+import NestedList from "@editorjs/nested-list";
 import Paragraph from "@editorjs/paragraph";
 import Quote from "@editorjs/quote";
+import RawTool from "@editorjs/raw";
 import SimpleImage from "@editorjs/simple-image";
 import Table from "@editorjs/table";
 import Warning from "@editorjs/warning";
@@ -30,6 +32,7 @@ const inlineToolbar = ["link", "bold", "italic", "strikethrough"];
 
 export const tools: Record<string, ToolConstructable | ToolSettings> = {
   embed: Embed,
+  raw: RawTool,
   image: SimpleImage,
   warning: Warning,
   table: Table,
@@ -46,7 +49,7 @@ export const tools: Record<string, ToolConstructable | ToolSettings> = {
     inlineToolbar
   },
   list: {
-    class: List,
+    class: NestedList,
     inlineToolbar
   },
   quote: {
