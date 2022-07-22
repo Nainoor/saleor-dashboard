@@ -7,7 +7,7 @@ import EditorJS, {
 } from "@editorjs/editorjs";
 import Embed from "@editorjs/embed";
 import Header from "@editorjs/header";
-import List from "@editorjs/list";
+// import List from "@editorjs/list";
 import NestedList from "@editorjs/nested-list";
 import Paragraph from "@editorjs/paragraph";
 import Quote from "@editorjs/quote";
